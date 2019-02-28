@@ -1,0 +1,38 @@
+buildscript {
+def versio = '1.5.17.RELEASE'
+	ext {
+		springBootVersion = '1.5.17.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		
+		                                                                                     
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'br.con.api'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('io.jsonwebtoken:jjwt:0.7.0')
+
+	runtimeOnly('org.springframework.boot:spring-boot-devtools:1.5.3.RELEASE')
+	runtime('org.postgresql:postgresql')
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
