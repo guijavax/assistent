@@ -32,7 +32,7 @@ public class LoginController implements Paths {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@RequestMapping(path="/efetuarLogin", method=RequestMethod.POST, consumes=JSON, produces=JSON)
+	@RequestMapping(path="/efetuarLogin", method=RequestMethod.POST)
 	public Map<String, Object> efetuarLogin(@RequestBody Map<String, String> user) {
 		LoginEntity login = new LoginEntity();
 		if (user != null && !user.isEmpty()) {

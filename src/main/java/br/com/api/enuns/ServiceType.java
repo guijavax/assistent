@@ -1,4 +1,4 @@
-package br.com.api.utils;
+package br.com.api.enuns;
 
 public enum ServiceType {
 	
