@@ -8,6 +8,6 @@ import br.com.api.entity.UserEntity;
 public interface UserRepository extends JpaRepository<UserEntity, Long>{
 	
 	
-	@Query(value="select u from UserEntity u where u.userName=?")
-	UserEntity getUsuario(String userName);
+//	@Query(value="select u from UserEntity u where u.userName=?")
+//	UserEntity getUsuario(String userName);
 }
